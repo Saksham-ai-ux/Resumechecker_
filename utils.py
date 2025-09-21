@@ -1,4 +1,4 @@
-import fitz
+import pymupdf as fitz
 import docx
 import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -98,3 +98,4 @@ def get_all_evaluations():
             "Resume Name", "Score", "Missing Skills", "JD Excerpt", "Matched Skills", 
             "Candidate Name", "Candidate Phone"
         ])
+
