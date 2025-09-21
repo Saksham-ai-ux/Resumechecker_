@@ -2,6 +2,7 @@ streamlit
 pymupdf
 python-docx
 scikit-learn
-spacy
+spacy==3.8.0
 fuzzywuzzy
 python-Levenshtein
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
