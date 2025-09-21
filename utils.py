@@ -7,7 +7,14 @@ import pandas as pd
 import os
 import re
 
-nlp = spacy.load("en_core_web_sm")
+# Load spaCy model safely (auto-download if missing)
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 global_skills = {"python", "spark", "machine learning", "sql", "tableau", "power bi", "data analysis"}
 CSV_FILENAME = "res_eval.csv"
 
